@@ -20,3 +20,10 @@ type UsersRepository interface {
 	GetAllUser() ([]domain.User, error)
 	DeleteUser(id string) error
 }
+
+type PayMent_Repository interface {
+	SavePayMentSubscription(payMentSubscription domain.PayMentSubscription) error
+	GetPayMentSubscriptionByID(id string) (domain.PayMentSubscription, error)
+	GetAllPayMentSubscription() ([]domain.PayMentSubscription, error)
+	DeletePayMentSubscription(id string) error
+}
